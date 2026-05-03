@@ -14,13 +14,116 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      categories: {
+        Row: {
+          color: string | null
+          created_at: string
+          description: string | null
+          id: string
+          name: string
+          slug: string
+        }
+        Insert: {
+          color?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          name: string
+          slug: string
+        }
+        Update: {
+          color?: string | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          name?: string
+          slug?: string
+        }
+        Relationships: []
+      }
+      posts: {
+        Row: {
+          author: string
+          category_slug: string
+          content: string
+          created_at: string
+          excerpt: string
+          faq: Json | null
+          featured_image_alt: string | null
+          featured_image_url: string | null
+          id: string
+          key_takeaways: string[] | null
+          keywords: string[] | null
+          meta_description: string
+          meta_title: string
+          published_at: string
+          reading_minutes: number | null
+          slug: string
+          status: string
+          title: string
+          updated_at: string
+          views: number
+        }
+        Insert: {
+          author?: string
+          category_slug: string
+          content: string
+          created_at?: string
+          excerpt: string
+          faq?: Json | null
+          featured_image_alt?: string | null
+          featured_image_url?: string | null
+          id?: string
+          key_takeaways?: string[] | null
+          keywords?: string[] | null
+          meta_description: string
+          meta_title: string
+          published_at?: string
+          reading_minutes?: number | null
+          slug: string
+          status?: string
+          title: string
+          updated_at?: string
+          views?: number
+        }
+        Update: {
+          author?: string
+          category_slug?: string
+          content?: string
+          created_at?: string
+          excerpt?: string
+          faq?: Json | null
+          featured_image_alt?: string | null
+          featured_image_url?: string | null
+          id?: string
+          key_takeaways?: string[] | null
+          keywords?: string[] | null
+          meta_description?: string
+          meta_title?: string
+          published_at?: string
+          reading_minutes?: number | null
+          slug?: string
+          status?: string
+          title?: string
+          updated_at?: string
+          views?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "posts_category_slug_fkey"
+            columns: ["category_slug"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["slug"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_post_views: { Args: { post_slug: string }; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
