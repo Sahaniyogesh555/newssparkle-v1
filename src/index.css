@@ -1,105 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 38 38% 97%;
+    --foreground: 20 14% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 14% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 14% 8%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 75% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 38 30% 92%;
+    --secondary-foreground: 20 14% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 38 20% 94%;
+    --muted-foreground: 20 8% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 70% 30%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 20 10% 88%;
+    --input: 20 10% 88%;
+    --ring: 0 75% 42%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 98%;
+    --headline: 20 14% 6%;
+    --byline: 20 8% 45%;
+    --rule: 20 14% 8%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --cat-world: 0 70% 45%;
+    --cat-politics: 220 70% 35%;
+    --cat-business: 155 65% 30%;
+    --cat-technology: 265 60% 45%;
+    --cat-sports: 22 90% 50%;
+    --cat-entertainment: 330 70% 50%;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-hero: linear-gradient(180deg, hsl(38 38% 97%) 0%, hsl(38 30% 92%) 100%);
+    --shadow-card: 0 1px 3px hsl(20 14% 8% / 0.06), 0 1px 2px hsl(20 14% 8% / 0.04);
+    --shadow-elevated: 0 10px 40px -12px hsl(20 14% 8% / 0.18);
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 20 14% 6%;
+    --foreground: 38 38% 95%;
+    --card: 20 14% 9%;
+    --card-foreground: 38 38% 95%;
+    --popover: 20 14% 9%;
+    --popover-foreground: 38 38% 95%;
+    --primary: 0 75% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 14% 14%;
+    --secondary-foreground: 38 38% 95%;
+    --muted: 20 14% 14%;
+    --muted-foreground: 38 10% 65%;
+    --accent: 220 70% 60%;
+    --accent-foreground: 20 14% 6%;
+    --border: 20 14% 18%;
+    --input: 20 14% 18%;
+    --ring: 0 75% 55%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', Georgia, serif;
+    @apply tracking-tight text-headline;
+    font-feature-settings: 'ss01';
+  }
+}
+
+@layer components {
+  .container-prose { @apply mx-auto w-full max-w-3xl px-4 sm:px-6; }
+  .container-wide { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+  .kicker {
+    @apply inline-block text-[11px] font-bold uppercase tracking-[0.14em];
   }
 
-  body {
-    @apply bg-background text-foreground;
+  .rule-top { @apply border-t-2 border-rule pt-3; }
+
+  .headline-hero {
+    font-family: 'Fraunces', serif;
+    @apply text-4xl sm:text-5xl md:text-6xl font-black leading-[1.05] tracking-tight;
+  }
+  .headline-card {
+    font-family: 'Fraunces', serif;
+    @apply text-xl sm:text-2xl font-bold leading-[1.15];
+  }
+
+  .prose-article {
+    @apply max-w-none text-foreground;
+  }
+  .prose-article p { @apply text-[1.0625rem] leading-[1.75] mb-5 text-foreground/90; }
+  .prose-article h2 {
+    font-family: 'Fraunces', serif;
+    @apply text-2xl sm:text-3xl font-bold mt-10 mb-4 text-headline;
+  }
+  .prose-article h3 {
+    font-family: 'Fraunces', serif;
+    @apply text-xl sm:text-2xl font-semibold mt-8 mb-3 text-headline;
+  }
+  .prose-article ul { @apply list-disc pl-6 mb-5 space-y-2; }
+  .prose-article ol { @apply list-decimal pl-6 mb-5 space-y-2; }
+  .prose-article li { @apply text-[1.0625rem] leading-[1.7] text-foreground/90; }
+  .prose-article a { @apply text-primary underline underline-offset-2 hover:no-underline; }
+  .prose-article blockquote {
+    @apply border-l-4 border-primary pl-5 my-6 italic text-xl text-headline;
+    font-family: 'Fraunces', serif;
+  }
+  .prose-article strong { @apply font-semibold text-headline; }
+  .prose-article img { @apply rounded-sm my-6 w-full; }
+  .prose-article code { @apply bg-muted px-1.5 py-0.5 rounded text-sm; }
+
+  .ad-slot {
+    @apply flex items-center justify-center bg-muted/60 border border-dashed border-border text-xs text-muted-foreground uppercase tracking-wider;
+    min-height: 90px;
   }
 }
