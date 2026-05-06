@@ -18,15 +18,29 @@ export function Header() {
           <span className="font-medium">Independent. Fact-based. Daily.</span>
           <span className="hidden sm:inline">EN</span>
         </div>
-        <div className="flex items-center justify-between py-4 sm:py-5">
-          <button className="md:hidden -ml-1 p-1.5" onClick={() => setOpen(!open)} aria-label="Menu">
+        <div className="grid grid-cols-[auto_1fr_auto] md:grid-cols-[1fr_auto_1fr] items-center gap-2 py-3 sm:py-4">
+          <button className="md:hidden p-1.5 -ml-1.5 justify-self-start" onClick={() => setOpen(!open)} aria-label="Menu">
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
-          <Link to="/" className="flex-1 md:flex-none flex items-center justify-center md:justify-start gap-2">
-            <img src={logo} alt={`${SITE.name} logo`} className="h-9 sm:h-11 md:h-12 w-auto" />
+          <div className="hidden md:block" aria-hidden="true" />
+          <Link
+            to="/"
+            aria-label={`${SITE.name} — home`}
+            className="justify-self-center flex items-center"
+          >
+            <img
+              src={logo}
+              alt={`${SITE.name} logo`}
+              width="640"
+              height="640"
+              decoding="async"
+              fetchPriority="high"
+              className="block h-10 sm:h-12 md:h-14 w-auto select-none [image-rendering:auto]"
+              draggable={false}
+            />
             <span className="sr-only">{SITE.name}</span>
           </Link>
-          <button className="p-1.5" aria-label="Search"><Search className="size-5" /></button>
+          <button className="p-1.5 -mr-1.5 justify-self-end" aria-label="Search"><Search className="size-5" /></button>
         </div>
         <nav className={cn("md:flex items-center justify-center gap-7 pb-3 border-t border-border pt-3", open ? "flex flex-col gap-3 md:flex-row md:gap-7" : "hidden")}>
           <NavLink to="/" end className={({isActive}) => cn("text-[13px] font-semibold uppercase tracking-wider transition-colors", isActive ? "text-primary" : "text-headline hover:text-primary")}>
