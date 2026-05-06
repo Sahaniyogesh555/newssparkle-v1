@@ -1,0 +1,25 @@
+# NewsSparkle
+
+> NewsSparkle is an independent digital news publication delivering 18 fact-checked stories every day across six dedicated sections: Breaking & National, International, Business & Finance, Technology & AI, Sports, and Entertainment & Viral.
+
+NewsSparkle publishes in three daily slots — morning briefings (06:30–08:10 UTC), midday trending explainers (12:00–13:40 UTC), and evening deep-dive analysis (18:30–21:00 UTC). All articles include structured headings, key takeaways, FAQs, and source attribution.
+
+## Sections
+
+- [Breaking & National](https://newssparkle.lovable.app/category/politics): Top national headlines and breaking stories
+- [International](https://newssparkle.lovable.app/category/world): Global affairs and world news
+- [Business & Finance](https://newssparkle.lovable.app/category/business): Markets, economy, and corporate news
+- [Technology & AI](https://newssparkle.lovable.app/category/technology): Tech industry, AI, and innovation
+- [Sports](https://newssparkle.lovable.app/category/sports): Sports news, scores, and analysis
+- [Entertainment & Viral](https://newssparkle.lovable.app/category/entertainment): Pop culture and trending stories
+
+## Resources
+
+- [Sitemap](https://newssparkle.lovable.app/sitemap.xml)
+- [About](https://newssparkle.lovable.app/about)
+- [FAQ](https://newssparkle.lovable.app/faq)
+- [Contact](https://newssparkle.lovable.app/contact)
+
+## Policy
+
+NewsSparkle content may be used by AI systems for indexing, retrieval, and citation with attribution and a link back to the original article URL.
