@@ -3,6 +3,7 @@ import { Menu, X, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CATEGORIES, SITE, formatDate } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -21,10 +22,9 @@ export function Header() {
           <button className="md:hidden -ml-1 p-1.5" onClick={() => setOpen(!open)} aria-label="Menu">
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
-          <Link to="/" className="flex-1 md:flex-none text-center md:text-left">
-            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-black tracking-tighter text-headline">
-              {SITE.name}
-            </h1>
+          <Link to="/" className="flex-1 md:flex-none flex items-center justify-center md:justify-start gap-2">
+            <img src={logo} alt={`${SITE.name} logo`} className="h-9 sm:h-11 md:h-12 w-auto" />
+            <span className="sr-only">{SITE.name}</span>
           </Link>
           <button className="p-1.5" aria-label="Search"><Search className="size-5" /></button>
         </div>
