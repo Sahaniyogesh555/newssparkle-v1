@@ -13,6 +13,7 @@ import Privacy from "./pages/Privacy.tsx";
 import Terms from "./pages/Terms.tsx";
 import Disclaimer from "./pages/Disclaimer.tsx";
 import FAQ from "./pages/FAQ.tsx";
+import Brand from "./pages/Brand.tsx";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/brand" element={<Brand />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
