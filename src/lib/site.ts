@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "PulseDaily",
+  name: "NewsSparkle",
   tagline: "Independent reporting on the world right now.",
-  description: "PulseDaily delivers fact-based, deeply researched coverage of world affairs, politics, business, technology, sports and entertainment — updated multiple times a day.",
-  url: typeof window !== "undefined" ? window.location.origin : "https://pulsedaily.app",
-  twitter: "@pulsedaily",
-  publisher: "PulseDaily Editorial Desk",
+  description: "NewsSparkle delivers fact-based, deeply researched coverage of breaking national news, international affairs, business, technology, sports and entertainment — 18 fresh stories every day.",
+  url: typeof window !== "undefined" ? window.location.origin : "https://newssparkle.lovable.app",
+  twitter: "@newssparkle",
+  publisher: "NewsSparkle Editorial Desk",
   logo: "/logo.svg",
 };
 

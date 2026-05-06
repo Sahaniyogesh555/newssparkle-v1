@@ -10,7 +10,7 @@ Deno.serve(async () => {
     .eq("status", "published").order("published_at", { ascending: false }).limit(2000);
 
   const cats = ["world","politics","business","technology","sports","entertainment"];
-  const staticUrls = ["", "about", "contact", "privacy", "terms", "disclaimer", ...cats.map(c => `category/${c}`)];
+  const staticUrls = ["", "about", "contact", "privacy", "terms", "disclaimer", "faq", ...cats.map(c => `category/${c}`)];
 
   const urls = [
     ...staticUrls.map(p => `<url><loc>${SITE_URL}/${p}</loc><changefreq>${p === "" ? "hourly" : "weekly"}</changefreq><priority>${p === "" ? "1.0" : "0.7"}</priority></url>`),
