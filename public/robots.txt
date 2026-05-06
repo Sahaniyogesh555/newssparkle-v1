@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
+Disallow: /404
 
-Sitemap: /sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://newssparkle.lovable.app/sitemap.xml
+Sitemap: https://newssparkle.lovable.app/functions/v1/sitemap
